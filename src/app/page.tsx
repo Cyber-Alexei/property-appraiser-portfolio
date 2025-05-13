@@ -73,18 +73,7 @@ export default function ProjectPage() {
     randomNumbersPlants?.length === gallery.length
   )
     return (
-      <div
-        onClick={(e: React.MouseEvent<HTMLDivElement>) => {
-          // Verify user is no clicking an element that must not close the menu
-          const target = e.target;
-          if (
-            target instanceof HTMLElement &&
-            !target.classList.contains("noquitmenu")
-          ) {
-          }
-        }}
-        className="relative flex flex-col items-center h-auto w-full overflow-hidden"
-      >
+      <div className="relative flex flex-col items-center h-auto w-full overflow-hidden">
         <div className="w-full h-full flex flex-col items-center">
           {/*MENU BUTTON*/}
           <div
@@ -92,14 +81,14 @@ export default function ProjectPage() {
               (window.location.href =
                 "https://alexei-torres-portfolio.netlify.app")
             }
-            className="cursor-pointer fixed top-5 w-auto h-auto z-[50] right-5 sm:right-10 bg-[#363F1F] text-white py-2 px-5 rounded-md font-medium"
+            className="cursor-pointer fixed top-5 w-auto h-auto z-[50] right-5 sm:right-10 bg-gray-700 text-white py-2 px-5 rounded-md font-medium"
           >
             Volver al portafolio
           </div>
           {/*MENU BUTTON*/}
           <h1
             /*style={{ textShadow: "1px 4px 8px #999999" }}*/
-            className="z-10 text-[50px] sm:text-[70px] md:text-[100px]"
+            className="z-10 text-[50px] sm:text-[70px] md:text-[100px] text-center pt-[60px]"
           >
             <span style={data.styles.titleCss}>{data.styles.title}</span>
             <span style={data.styles.title2Css}>
@@ -160,7 +149,7 @@ export default function ProjectPage() {
                       </div>
                       {/*IMAGE*/}
                       <div
-                        className={`relative my-2 smrProjectScreenShotsMovil sm:smProjectScreenShotsMovil md:mdProjectScreenShotsMovil lg:lgProjectScreenShotsDesktop xl:xlProjectScreenShotsDesktop border border-solid border-[#363F1F] z-10 bg-cover bg-center bg-no-repeat`}
+                        className={`relative my-2 smrProjectScreenShotsMovil sm:smProjectScreenShotsMovil md:mdProjectScreenShotsMovil lg:lgProjectScreenShotsDesktop xl:xlProjectScreenShotsDesktop z-10 bg-cover bg-center bg-no-repeat`}
                       >
                         <Image
                           className="absolute"
@@ -172,7 +161,7 @@ export default function ProjectPage() {
                           }
                           fill={true}
                           style={{
-                            objectFit: "cover",
+                            objectFit: "contain",
                           }}
                           priority={true}
                         />
